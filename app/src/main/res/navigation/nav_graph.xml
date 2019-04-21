@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/fragmentOne">
+
+    <fragment
+            android:id="@+id/fragmentOne"
+            android:name="com.example.constraints.FragmentOne"
+            android:label="fragment_fragment_one"
+            tools:layout="@layout/fragment_fragment_one">
+        <action
+                android:id="@+id/action_fragmentOne_to_fragmentTwo"
+                app:destination="@+id/fragmentTwo"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+                android:id="@+id/action_fragmentOne_to_activityTwo2"
+                app:destination="@id/activityTwo"
+                app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentTwo"
+            android:name="com.example.constraints.FragmentTwo"
+            android:label="fragment_fragment_two"
+            tools:layout="@layout/fragment_fragment_two"/>
+    <activity
+        android:id="@+id/activityTwo"
+        android:name="com.example.constraints.ActivityTwo"
+        android:label="fragment_activity_two"
+        tools:layout="@layout/activity_two"/>
+</navigation>
